@@ -2,3 +2,4 @@
 - The developer tries to give the program freedom as much as possible while demonstrating the distributed problem solving solution.
 - This is a demo case for using XTblock's blockchain network to build a distributed AI solution.
 - There are many ideas in this program to quickly build an opponent that allow us to priotize our focus on different development areas while the team is small.
+- Feel free to help us clean this source code.
