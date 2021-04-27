@@ -1,0 +1,135 @@
+@import "./param.scss";
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
+.board-row {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  border-top: 1px solid #FFFFFF;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  &:first-child &__square::after {
+    top: 50%;
+    height: 50%;
+  }
+
+  &:last-child &__square::after {
+    height: 50%;
+  }
+
+  &:first-child &__square {
+    &:first-child {
+      border-top-left-radius: 4px;
+    }
+    &:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+
+  &:last-child &__square {
+    &:first-child {
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 4px;
+    }
+  }
+
+  &__square {
+    //background: rgb(158, 118, 66);
+    background: #a89a8c;
+    border: none;
+    //float: left;
+    height: 32px;
+    // for window.devicePixelRatio = 1.5
+    margin-right: -2px;
+    margin-top: -2px;
+    width: 32px;
+    position: relative;
+    outline: none;
+    &::before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+    }
+
+    &::after {
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      //background: #000;
+      background: $main-color;
+      z-index: 0;
+    }
+
+    &:first-child::before {
+      left: 50%;
+    }
+
+    &:last-child::before {
+      right: 50%;
+    }
+
+    &:first-child::before,
+    &:last-child::before {
+      width: 50%;
+    }
+  }
+
+  &__stone {
+    border-radius: 50%;
+    z-index: 10;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    height: 85%;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    margin-right: 0;
+    transform: translate(-50%, -50%);
+
+    &--black {
+      background-color: black;
+      display: block;
+    }
+
+    &--white {
+      background-color: white;
+      display: block;
+    }
+
+    &--check {
+      background-color: rgb(197, 115, 115);
+      display: block;
+      height: 0%;
+      width: 0%;
+      box-shadow: 0px 0px 9px 9px rgb(204, 4, 4);
+    }
+  }
+
+  &__square:hover > &__stone {
+    display: block;
+    //background: none;
+    //border: dotted 2px rgb(173, 173, 173);
+  }
+}

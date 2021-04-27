@@ -1,0 +1,33 @@
+@import './../reset.css';
+@import './param.scss';
+
+.game_steps {
+  text-align: center;
+  ol {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+}
+
+.game-step {
+  margin-top: 0.5em;
+  // float: right;
+  >  button{
+    padding: 5px;
+    border: $border;
+    border-radius: $border-radius;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($main-color, 0.5);
+      color: $font-color-active;
+      border-color: $font-color-active;
+    }
+    &:active {
+      background-color: $main-color;
+    }
+  }
+}

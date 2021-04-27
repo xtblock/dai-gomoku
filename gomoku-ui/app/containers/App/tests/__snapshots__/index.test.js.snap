@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render and match the snapshot 1`] = `
+<div>
+  <HashRouter>
+    <React.Suspense
+      fallback={
+        <div
+          className="animated fadeIn pt-3 text-center"
+        >
+          Loading...
+        </div>
+      }
+    >
+      <Switch>
+        <Route
+          name="Admin"
+          path="/admin"
+          render={[Function]}
+        />
+        <Route
+          name="Home"
+          path="/"
+          render={[Function]}
+        />
+      </Switch>
+    </React.Suspense>
+  </HashRouter>
+  <GlobalStyleComponent />
+</div>
+`;

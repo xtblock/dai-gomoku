@@ -1,0 +1,166 @@
+@import "./param.scss";
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  background: $bg-color;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+
+  &_steps {
+    width: 220px;
+  }
+
+  &_title {
+    text-align: center;
+    color: $main-color;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: serif;
+    margin-top: 0.5em;
+    //text-shadow: black 3px 2px 4px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.controlsize {
+  width: 220px;
+}
+
+.player {
+  text-align: center;
+  font-size: 30px;
+  margin: 0.5em 0;
+  color: rgba($main-color, 1);
+  position: relative;
+  padding: 0px;
+  //justify-content: center;
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: 800px) {
+    justify-content: center;
+  }
+
+  &-winner {
+    margin: 0.5em auto;
+    //width: 30vw;
+    color: $main-color;
+    //border: 2px dashed $main-color;
+    border-radius: $border-radius;
+    padding: 5px 0;
+  }
+
+  &__shadow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #314174;
+    box-shadow: 2px 2px 6px 3px rgba(255, 255, 255, 0.9) inset;
+    padding: 5px;
+    margin: 0px 5px;
+  }
+
+  &__stone {
+    border-radius: 50%;
+    z-index: 10;
+    box-sizing: border-box;
+    //margin-left: 10px;
+    height: 40px;
+    width: 40px;
+
+    &-black {
+      background-color: black;
+      //box-shadow: 2px 2px 6px 3px rgba(255, 255, 255, 0.3) inset;
+    }
+    &-white {
+      background-color: white;
+      //box-shadow: -3px -3px 3px 1px rgba(165, 42, 42, 0.5) inset;
+    }
+  }
+}
+.vertical-index-wrapper {
+  margin-top: -2px;
+}
+.vertical-index {
+  margin-top: 0px;
+  padding: 0px;
+  color: $main-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-index-wrapper {
+  margin-left: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.horizontal-index {
+  margin-left: 0;
+  display: block;
+  width: 20px;
+  text-align: center;
+  color: #314174;
+  font-size: 12px;
+  margin-left: -2px;
+  float: left;
+}
+
+span.contestant {
+  display: inline-block;
+  background: #02f4b5;
+  min-width: 100px;
+  text-align: center;
+  font-size: 24px;
+  padding: 8px 10px;
+  color: $main-color;
+}
+
+span.contestant-result {
+  display: inline-block;
+  border: 2px solid #02f4b5;
+  min-width: 100px;
+  text-align: center;
+  //font-size: 24px;
+  padding: 0px 10px;
+  color: $main-color;
+  font-weight: bold;
+}
+
+.button-background {
+  background: #02f4b5;
+  color: $main-color;
+  font-size: 20px;
+}
+
+.form-check-input {
+  margin-left: -15px;
+}
+
+.copy-right {
+  color: $main-color;
+  font-size: 18px;
+}
+
+.latest-move-white {
+  box-shadow: 0px 0px 3px 3px #000000;
+}
+
+.latest-move-black {
+  box-shadow: 0px 0px 3px 3px #ffffff;
+}
+
+.select-color-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
